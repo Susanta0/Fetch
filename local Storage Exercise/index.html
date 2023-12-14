@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCAL STORAGE EXERCISEt</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+           display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-container{
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+            margin:50px auto;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 30px;  
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .main-container>div{
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        p{
+            text-align: center;
+            margin: 50px;
+            font-size: 24px;
+            font-weight: 700;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        #from-container{
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            padding: 20px;
+            margin: auto;
+            border-radius: 5px;
+        }
+        #from-container>input{
+            width: 200px;
+            margin: 10px 0px;
+            height: 25px;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+        #from-container>label{
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #userDetailsContainer{
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            padding: 0px 20px;
+            margin: auto;
+            height:225.5px ;
+            border-radius: 5px;
+        }
+        #userDetailsContainer>label{
+            margin: 10px 0px;
+        }
+        #show{
+           padding: 5px 20px;
+           margin: 35px 0px;
+           background-color: blue;
+           color:honeydew;
+           border: none;
+           border-radius: 5px;
+           font-weight: 500;
+        }
+        #showName,#showAge{
+            font-size: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 700;
+            margin: 20px 0px;
+        }
+        h4{
+            width: fit-content;
+            font-size: 16px;
+            background-color: darkorchid;
+            color: #fff;
+        }
+        #submit{
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: aquamarine;
+        }
+        #submit:hover{
+            background-color: blueviolet;
+            color: #fff;
+        }
+        #show:hover{
+            background-color: chartreuse;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div>
+        <p>User Details</p>
+        <form id="from-container">
+            <label>Name</label>
+            <input id="name" type="text">
+            <label>Age</label>
+            <input id="age" type="number">
+            <input id="submit" type="submit">
+        </form>
+        </div>
+        <div>
+        <p class="shownUserText">Show User Details</p>
+        <form id="userDetailsContainer">
+            <label id="showName">Name :</label>
+            <h4></h4>
+            <label id="showAge">Age :</label>
+            <h4></h4>
+            <button id="show">Show Deatils</button>
+        </form>
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>
