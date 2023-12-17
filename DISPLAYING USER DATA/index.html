@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DISPLAYING USER DATA</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .buttonDiv {
+        text-align: center;
+        margin: 20px 0px;
+      }
+      #fetch {
+        background-color: aquamarine;
+        padding: 10px 20px;
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 700;
+      }
+      #fetch:hover {
+        background-color: blueviolet;
+        color: #fff;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 20px;
+        letter-spacing: 1.5px;
+      }
+      #userContainer {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        width: fit-content;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 20px;
+        width: auto;
+      }
+      #userContainer {
+        display: none;
+      }
+      .userBox {
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        padding: 10px;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        letter-spacing: 2px;
+        line-height: 30px;
+      }
+      .home {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 30px 0px;
+      }
+      #home {
+        display: none;
+        font-size: 20px;
+        padding: 6px 25px;
+        font-weight: 700;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        border: none;
+        background-color: lawngreen;
+        color: cornflowerblue;
+        border-radius: 5px;
+        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+        cursor: pointer;
+      }
+      #home:hover {
+        background-color: rgb(100, 166, 34);
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="buttonDiv"><button id="fetch">Fetch Users</button></div>
+    <!-- apped all user details -->
+    <div id="userContainer"></div>
+    <!-- back to home button -->
+    <div class="home"><button id="home">Back</button></div>
+  </body>
+  <script src="./index.js"></script>
+</html>
